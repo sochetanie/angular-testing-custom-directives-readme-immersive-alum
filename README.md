@@ -88,7 +88,7 @@ describe('Directive Test', function() {
 	var count = element(by.css('.counter__count'));
 
 	it('should have an initial 0 count', function () {
-		expect(count.getInnerHtml()).toEqual('Current count: 0');
+		expect(count.getAttribute('innerHTML')).toEqual('Current count: 0');
 	});
 });
 ```
@@ -103,13 +103,13 @@ describe('Directive Test', function() {
 	var count = element(by.css('.counter__count'));
 
 	it('should have an initial 0 count', function () {
-		expect(count.getInnerHtml()).toEqual('Current count: 0');
+		expect(count.getAttribute('innerHTML')).toEqual('Current count: 0');
 	});
 
 	it('should increment when we click on it', function () {
 		counter.click();
 
-		expect(count.getInnerHtml()).toEqual('Current count: 1');
+		expect(count.getAttribute('innerHTML')).toEqual('Current count: 1');
 	});
 
 });
