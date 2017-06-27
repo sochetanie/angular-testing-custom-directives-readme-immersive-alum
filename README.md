@@ -13,7 +13,7 @@ Now that we know all about custom directives, we need to test them. We do this v
 
 We already know how to use protractor to test our HTML output, so the explanation on how to test directives is very similar.
 
-Our protractor setup currently runs a local webserver so we have a web page to test in our tests - this is the `index.html` that we've used before (you can see an example in this repo). Here we include all of our directives etc, and we use them like we would inside a normal application. This allows protractor to use the directive like a normal user would.
+Our protractor setup currently runs a local webserver so that we have a web page to test in our tests - this is the `index.html` that we've used before (you can see an example in this repo). Here we include all of our directives, etc., and we use them like we would inside a normal application. This allows protractor to use the directive like a normal user would.
 
 Inside this repo, we've got a counter directive that increments when we click on the directive.
 
@@ -49,7 +49,7 @@ angular
 	.directive('counter', Counter);
 ```
 
-Let's test this that our directive is functioning properly.
+Let's test that our directive is functioning properly.
 
 Inside our `index.html`, we have this:
 
@@ -115,6 +115,6 @@ describe('Directive Test', function() {
 });
 ```
 
-Sorted - now our directive is tested, and is working perfectly!
+Sorted - now our directive is tested and working perfectly!
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/angular-testing-custom-directives-readme'>Angular Testing Custom Directives </a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-testing-custom-directives-readme'>Angular Testing Custom Directives</a> on Learn.co and start learning to code for free.</p>
