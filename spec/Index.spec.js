@@ -1,17 +1,10 @@
 describe('Directive Test', function() {
-	browser.get('http://localhost:8080');
+  browser.get('http://locahost:8000');
 
-	var counter = element(by.css('.counter'));
-	var count = element(by.css('.counter__count'));
+  var directive = element.all(by.css('user-profile'))
 
-	it('should have an initial 0 count', function () {
-		expect(count.getInnerHtml()).toEqual('Current count: 0');
-	});
-
-	it('should increment when we click on it', function () {
-		counter.click();
-
-		expect(count.getInnerHtml()).toEqual('Current count: 1');
-	});
-
-});
+  it('should correctly display a name', function() {
+    expect(directive.get(0).getText()).toContain('Name:');
+    expect(directive.get(1).getText()).toContain('Tim Cook');
+  });
+})
